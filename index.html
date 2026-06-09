@@ -375,6 +375,10 @@
       gap: 1.25rem;
     }
 
+@media (max-width: 1100px) { .processo-steps { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .processo-steps { grid-template-columns: 1fr !important; gap: 1.25rem !important; } .project-card.featured { grid-column: span 1 !important; } .projects-grid { grid-template-columns: 1fr !important; } .nav-links { display: none !important; } }
+@media (max-width: 480px) { .processo-steps { grid-template-columns: 1fr !important; } }
+
     .step {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(168, 85, 247, 0.25);
@@ -484,41 +488,6 @@
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    /* ── RESPONSIVO DE VERDADE (COMPUTER + MOBILE PERFEITO) ── */
-    @media (max-width: 1100px) { .processo-steps { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 768px) {
-      .project-card.featured { grid-column: span 1; }
-      .nav-links { display: none; }
-      .portfolio-header { flex-direction: column; align-items: flex-start; }
-      
-      /* Ajuste das estatísticas do "Sobre" no celular */
-      .sobre-stats { 
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
-        gap: 1rem; 
-      }
-
-      /* Ajuste essencial para os 5 cards do Processo no celular */
-      .processo-steps {
-        grid-template-columns: 1fr !important; /* Faz os cards empilharem verticalmente */
-        gap: 1rem;
-      }
-      
-      .step {
-        padding: 24px 20px; /* Dá uma margem de respiro menor no mobile */
-      }
-      
-      .section-title {
-        font-size: 2.25rem !important; /* Impede os títulos gigantes de estourarem a tela */
-      }
-    }
-    @media (max-width: 480px) {
-      .processo-steps { grid-template-columns: 1fr !important; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, .hero::before, .hero::after { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
@@ -664,7 +633,7 @@
     <div class="projects-grid" id="projects-grid">
       <div class="project-card featured" data-cat="social">
         <div class="project-img">
-          <img src="posts-datafull.png" alt="Posts para Redes Sociais - DATAFull Tecnologia">
+          <img src="imagens/posts-datafull.png" alt="Posts para Redes Sociais - DATAFull Tecnologia">
         </div>
         <div class="project-body">
           <div class="project-cat">Social Media</div>
@@ -687,7 +656,7 @@
 
       <div class="project-card" data-cat="uiux">
         <div class="project-img">
-          <img src="sistema-alfabetizacao.png" alt="Sistema de alfabetização">
+          <img src="imagens/sistema-alfabetizacao.png" alt="Sistema de alfabetização">
         </div>
         <div class="project-body">
           <div class="project-cat">UI / UX</div>
@@ -708,14 +677,14 @@
 
       <div class="project-card" data-cat="web">
         <div class="project-img">
-          <img src="portal-transparencia.png" alt="Portal de Transparência">
+          <img src="imagens/portal-transparencia.png" alt="Portal de Transparência">
         </div>
         <div class="project-body">
           <div class="project-cat">Projeto Web</div>
           <h3>Portal de Transparência</h3>
           <p>
             Desenvolvimento de portal web responsivo voltado à consulta de informações públicas,
-            com foco em acessibilidade, organização de dados, filtros de busca e experiência
+            com foco em acessibilidade, organization de dados, filtros de busca e experiência
             intuitiva para o usuário.
           </p>
           <div class="project-tags">
@@ -729,7 +698,7 @@
 
       <div class="project-card" data-cat="social">
         <div class="project-img">
-          <img src="adoteummiau.png" alt="Adote Um Miau">
+          <img src="imagens/adoteummiau.png" alt="Adote Um Miau">
         </div>
         <div class="project-body">
           <div class="project-cat">Social Media</div>
